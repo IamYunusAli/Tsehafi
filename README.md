@@ -10,8 +10,6 @@ To get a local copy of this exercise, Please follow these simple example steps.
 $ git clone https://github.com/IamYunusAli/Tsehafi.git
 $ cd tsehafi
 $ bundle install
-$ bin/rails db:create
-$ rake db:migrate
 $ rails s
 ```
 👤 **Yunus Ali**
