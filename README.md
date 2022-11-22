@@ -1,24 +1,35 @@
-# README
+# Project Name: Tsehafi
+## Built With
+- Languages: Ruby
+- Framework: Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting started
+To get a local copy of this exercise, Please follow these simple example steps.
 
-Things you may want to cover:
+```bash command
+$ git clone https://github.com/IamYunusAli/Tsehafi.git
+$ cd tsehafi
+$ bundle install
+$ bin/rails db:create
+$ rake db:migrate
+$ rails s
+```
+👤 **Yunus Ali**
 
-* Ruby version
+- GitHub: [@IamYunusALi](https://github.com/iamyunusali)
+- Twitter: [@IamYunusAli](https://twitter.com/iamyunusali)
+- LinkedIn: [Yunus Ali](https://linkedin.com/in/iamyunusali)
 
-* System dependencies
+## 🤝 Contributing
 
-* Configuration
+Contributions, issues, and feature requests are welcome!
 
-* Database creation
+Feel free to check the [issues page](../../issues/).
 
-* Database initialization
+## Show your support
 
-* How to run the test suite
+Give a ⭐️ if you like this project!
 
-* Services (job queues, cache servers, search engines, etc.)
+## 📝 License
 
-* Deployment instructions
-
-* ...
+This project is [MIT](./MIT.md) licensed.
