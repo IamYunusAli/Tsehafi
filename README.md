@@ -10,8 +10,12 @@ To get a local copy of this exercise, Please follow these simple example steps.
 $ git clone https://github.com/IamYunusAli/Tsehafi.git
 $ cd tsehafi
 $ bundle install
-$ rails s
+$ rails db:create
+$ rails db:migrate
+$ rails c
 ```
+then interact with the irb
+
 👤 **Yunus Ali**
 
 - GitHub: [@IamYunusALi](https://github.com/iamyunusali)
