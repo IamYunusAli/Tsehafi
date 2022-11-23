@@ -25,7 +25,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'posts counter should increment while added' do
-    subject.posts_counter+=1
+    subject.posts_counter += 1
     expect(subject.posts_counter).to eq 1
   end
 end
