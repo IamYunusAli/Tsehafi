@@ -19,7 +19,7 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="https://raw.githubusercontent.com/microverseinc/readme-template/master/murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Microverse README Template</b></h3>
@@ -132,39 +132,37 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-<!--
+```
 $ git clone https://github.com/IamYunusAli/Tsehafi.git
---->
+```
 
 ### Install
 
 Install this project with:
 
-<!--
+```
 $ bundle install
---->
-
+```
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
 ```
-4 cd tsehafi
+$ cd tsehafi
 $ bundle install
 $ rails db:create
 $ rails db:migrate
 $rails server
 ```
---->
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-  bin/rails rspec
---->
+```
+  $ bin/rails rspec
+  $ rspec spec/foldername/
+```
 
 ### Deployment
 
