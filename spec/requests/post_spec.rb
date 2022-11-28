@@ -22,11 +22,7 @@ RSpec.describe 'Posts', type: :request do
   end
 
   before(:example) do
-    user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.',
-                       posts_counter: 0)
-    post = Post.new(author: user, title: 'Hello', text: 'This is my first post', comments_counter: 2,
-                    likes_counter: 2)
-    get "/users/#{user.id}/posts/#{post.id}"
+    get '/users/1/posts/1'
   end
 
   it 'response status was correct' do
@@ -34,10 +30,10 @@ RSpec.describe 'Posts', type: :request do
   end
 
   it 'correct template was rendered' do
-    expect(response).to render_template(:index)
+    expect(response).to render_template(:show)
   end
 
   it 'the response body includes correct placeholder text' do
-    expect(response.body).to include('All posts ')
+    expect(response.body).to include('Post on a given post id')
   end
 end
