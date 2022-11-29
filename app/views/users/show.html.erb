@@ -1,1 +1,26 @@
-<h1>User of a given user ID</h1>
+<div>
+    <div class="row">
+    <img  class="profile-image" src="<%= @user.photo %>" alt="User photo">
+    <p><h1><%= @user.name %></h1> <span>Number of posts: <%= @user.posts_counter %> </span></p>
+    </div>
+    <p>Bio</p>
+    <p class="center"><%= @user.bio %></p>
+
+    <ul>
+    <% @user.recent_posts.each_with_index  do |post, index| %>
+      <div class="row">
+      <li>
+      <h3> Post #<%= index %></h3>
+        <h4><p><%= post.title %></p></h4>
+        <p><%= truncate(post.text, length: 50) %></p>
+      </li>
+      <p>Comments <%= post.comments_counter %>, Likes <%= post.likes_counter %></p>
+      </div>
+    <% end %>
+
+    <%= link_to "#{@user.id}/posts" do%>
+    <button>see all project</button>
+    <%end%>
+
+    </ul>
+</div>

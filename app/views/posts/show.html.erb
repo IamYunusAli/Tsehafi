@@ -1,1 +1,11 @@
-<h1>Post on a given post id</h1>
+<div class="row">
+<h4><p>Post by <%= @user.name %></p></h4>
+<p>Comments <%= @post.comments_counter %>, Likes <%= @post.likes_counter %></p>
+</div>
+<p><%= @post.text %></p>
+        <% @post.comments.each do |comment| %>
+          <p>
+            <%= User.find(comment.author_id).name %>: <%= comment.text %>
+          </p>
+    <% end %>
+</ul>
