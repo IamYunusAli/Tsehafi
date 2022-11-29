@@ -1,1 +1,28 @@
 <h1>All posts <h1>
+
+<div class="row">
+<img class="profile-image" src="<%= @user.photo %>">
+<strong><%= @user.name %></strong>
+<p> <span>Number of posts: <%= @user.posts_counter %> </span></p>
+</div>
+<ul>
+  <% @posts.each_with_index do |post, index| %>
+  <li>
+
+    <h3> Post #<%= index %></h3>
+       <%= link_to "posts/#{post.id}" do%>
+       <div class="row"><h3><%= post.text %></h3>
+        <p>Comments <%= post.comments_counter %>, Likes <%= post.likes_counter %></p>
+              </div>
+       <%end%>
+        <% post.comments.each do |comment| %>
+          <p>
+            <%= User.find(comment.author_id).name %>: <%= comment.text %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+    </li>
+  <% end %>
+</ul>
+<button>Pagination</button>
