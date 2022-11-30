@@ -28,10 +28,10 @@ class PostsController < ApplicationController
     @post.author = current_user
     @post.likes_counter = 0
     @post.comments_counter = 0
-    if @post.save
-      redirect_to posts_new_path
-      flash[:success] = 'Post have been saved successfully'
-    end
+    return unless @post.save
+
+    redirect_to posts_new_path
+    flash[:success] = 'Post have been saved successfully'
   end
 
   def new
@@ -39,6 +39,7 @@ class PostsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :text)
   end
