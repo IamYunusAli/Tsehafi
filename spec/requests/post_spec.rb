@@ -3,9 +3,12 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :request do
   describe 'index' do
     before(:example) do
-      user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.',
-                         posts_counter: 0)
-      get "/users/#{user.id}/posts"
+      @user = User.create(name: 'Yunus', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.',
+                          posts_counter: 0)
+      @post = Post.create(author: @user, title: 'new post', text: 'I love posting', comments_counter: 0,
+                          likes_counter: 0)
+      Comment.create(author: @user, post: @post, text: 'I love comments')
+      get "/users/#{@user.id}/posts"
     end
 
     it 'response status was correct' do
@@ -17,12 +20,17 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'the response body includes correct placeholder text' do
-      expect(response.body).to include('All posts ')
+      expect(response.body).to include('Yunus')
     end
   end
 
   before(:example) do
-    get '/users/1/posts/1'
+    @user = User.create(name: 'Yunus', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.',
+                        posts_counter: 0)
+    @post = Post.create(author: @user, title: 'new post', text: 'I love posting', comments_counter: 0,
+                        likes_counter: 0)
+    Comment.create(author: @user, post: @post, text: 'I love comments')
+    get "/users/#{@user.id}/posts/#{@post.id}"
   end
 
   it 'response status was correct' do
@@ -34,6 +42,6 @@ RSpec.describe 'Posts', type: :request do
   end
 
   it 'the response body includes correct placeholder text' do
-    expect(response.body).to include('Post on a given post id')
+    expect(response.body).to include('Yunus')
   end
 end
