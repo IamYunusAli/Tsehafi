@@ -188,6 +188,13 @@ Example:
 - Twitter: [@IamYunusAli](https://twitter.com/iamyunusali)
 - LinkedIn: [Yunus Ali](https://linkedin.com/in/iamyunusali)
 
+👤 **Husseini Mudi Profsain**
+
+- GitHub: [@githubhandle](https://github.com/Profsain)
+- Twitter: [@twitterhandle](https://twitter.com/profsain)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/profsain)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
