@@ -49,3 +49,59 @@ li {
   flex-direction: row;
   justify-items: center;
 }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  width: 50%;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+::placeholder {
+  color: #000;
+}
+
+.log-button {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.inp {
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+  border: 2px solid #000;
+  padding: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.form {
+  width: 50%;
+}
+
+.field {
+  width: 100%;
+}
+
+.btn {
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+  border: 2px solid #000;
+  padding: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
